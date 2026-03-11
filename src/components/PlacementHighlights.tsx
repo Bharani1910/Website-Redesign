@@ -100,18 +100,34 @@ const PlacementHighlights = () => {
                     >
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl skew-y-2 group transition-transform hover:skew-y-0 duration-700">
                             <img
-                                src="/images/placements.png"
+                                src="https://www.gcee.ac.in/assets/img/main/img1-1.jpg"
                                 alt="Placement Celebration"
                                 className="w-full object-cover aspect-video group-hover:scale-110 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-primary/20"></div>
                         </div>
 
-                        {/* Recruiters Logos Carousel (Simple representation) */}
+                        {/* Recruiters Logos Carousel */}
                         <div className="mt-12 overflow-hidden whitespace-nowrap">
-                            <div className="animate-marquee flex items-center space-x-12 opacity-80 transition-all duration-500">
-                                {['CTS', 'ZOHO', 'TCS', 'INFOSYS', 'CADENCE', 'NOKIA', 'HCL', 'IBM', 'WIPRO', 'TECH MAHINDRA'].map((logo) => (
-                                    <span key={logo} className="text-2xl font-black font-heading tracking-widest text-white/40">{logo}</span>
+                            <div className="animate-marquee flex items-center space-x-12 opacity-80 transition-all duration-500 py-4">
+                                {[
+                                    { name: "CTS", img: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/1d47ac84-8c61-59ae-9f64-f6121b57be62/e0768043-f16d-5667-a3cd-c51a212d68ac.jpg" },
+                                    { name: "ZOHO", img: "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/a8a06707-bc0d-5511-a0f5-d1ff011ceac4/dfb8d196-14ec-5e1b-bc6b-d52a6485df78.jpg" },
+                                    { name: "TCS", img: "https://tse3.mm.bing.net/th/id/OIP.aV4Sl6mcI_dpZ58cCBmxJQHaC-?pid=Api&P=0&h=180" },
+                                    { name: "INFOSYS", img: "https://tse2.mm.bing.net/th/id/OIP.n-qBGTTsnFyAFEnTIMj3hwHaHa?pid=Api&P=0&h=180" },
+                                    { name: "CADENCE", img: "https://tse3.mm.bing.net/th/id/OIP.MMw66j0U5UZSLIqzEDJvPgHaEK?pid=Api&P=0&h=180" },
+                                    { name: "NOKIA", img: "https://tse4.mm.bing.net/th/id/OIP.D7hgAxnUjxjwcSepWCShbwHaEK?pid=Api&P=0&h=180" },
+                                    { name: "HCL", img: "https://tse4.mm.bing.net/th/id/OIP.cKAHFqOjJ4LTN2kvRwgyLgHaEK?pid=Api&P=0&h=180" },
+                                    { name: "IBM", img: "https://tse4.mm.bing.net/th/id/OIP.7qx99OizDrFQjb1EkgZ-YAHaEK?pid=Api&P=0&h=180" },
+                                    { name: "WIPRO", img: "https://tse4.mm.bing.net/th/id/OIP.YjODjDA0O2rDqD_LQUzKDgHaEK?pid=Api&P=0&h=180" },
+                                    { name: "TECH MAHINDRA", img: "https://tse3.mm.bing.net/th/id/OIP.voIRGFzBIebkjiPOoh4SjgHaE7?pid=Api&P=0&h=180" }
+                                ].map((logo) => (
+                                    <div key={logo.name} className="flex flex-col items-center shrink-0">
+                                        <div className="h-10 w-auto relative flex items-center justify-center grayscale hover:grayscale-0 transition-all">
+                                            <img src={logo.img} alt={logo.name} className="max-h-full max-w-[120px] object-contain" />
+                                        </div>
+                                        <span className="text-[10px] font-black font-heading tracking-widest text-white/40 mt-2">{logo.name}</span>
+                                    </div>
                                 ))}
                             </div>
                         </div>

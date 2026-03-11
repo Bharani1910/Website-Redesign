@@ -26,22 +26,7 @@ const Footer = () => {
                             dedicated to technical excellence and social responsibility under the governance of
                             Directorate of Technical Education (DoTE).
                         </p>
-                        <div className="flex space-x-4">
-                            <Link href="https://facebook.com" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all">
-                                <Facebook className="w-5 h-5" />
-                            </Link>
-                            <Link href="https://twitter.com" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all">
-                                <Twitter className="w-5 h-5" />
-                            </Link>
-                            <Link href="https://linkedin.com" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all">
-                                <Linkedin className="w-5 h-5" />
-                            </Link>
-                            <Link href="https://instagram.com" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all">
-                                <Instagram className="w-5 h-5" />
-                            </Link>
-                        </div>
                     </div>
-
                     {/* Quick Links */}
                     <div>
                         <h3 className="text-lg font-bold font-heading mb-6 border-l-4 border-secondary pl-4">Quick Links</h3>
@@ -74,7 +59,8 @@ const Footer = () => {
                                 'Civil Engineering',
                                 'Mechanical Engineering',
                                 'Automobile Engineering',
-                                'Computer Science (DS)',
+                                'Computer science engineering (Data Science)',
+                                'Computer science Engineering',
                                 'Electrical Engineering',
                                 'Information Technology',
                                 'Electronics Engineering'
