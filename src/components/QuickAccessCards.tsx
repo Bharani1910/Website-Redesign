@@ -7,7 +7,7 @@ import {
     Layers,
     Briefcase,
     Microscope,
-    Download,
+    Users,
     UserCircle
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -31,8 +31,8 @@ const accessItems = [
         title: "Placements",
         desc: "Outstanding career opportunities for students.",
         icon: <Briefcase className="w-8 h-8" />,
-        href: "/placements",
-        color: "bg-orange-500"
+        color: "bg-orange-500",
+        href: "/placements"
     },
     {
         title: "Research",
@@ -42,11 +42,11 @@ const accessItems = [
         color: "bg-green-500"
     },
     {
-        title: "Downloads",
-        desc: "Access forms, schedules and materials.",
-        icon: <Download className="w-8 h-8" />,
-        href: "/downloads",
-        color: "bg-red-500"
+        title: "Alumni Hub",
+        desc: "Staying connected with our global graduate network.",
+        icon: <Users className="w-8 h-8" />,
+        href: "/alumni",
+        color: "bg-rose-500"
     },
     {
         title: "Student Portal",

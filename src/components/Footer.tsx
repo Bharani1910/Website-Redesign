@@ -54,7 +54,7 @@ const Footer = () => {
                                 { name: 'Research', href: '/research' },
                                 { name: 'News & Events', href: '/news-events' },
                                 { name: 'Gallery', href: '/gallery' },
-                                { name: 'Downloads', href: '/downloads' },
+                                { name: 'Alumni Hub', href: '/alumni' },
                             ].map((item) => (
                                 <li key={item.name}>
                                     <Link href={item.href} className="text-white/70 hover:text-secondary hover:translate-x-2 flex items-center transition-all group">
