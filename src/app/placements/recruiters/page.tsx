@@ -78,7 +78,7 @@ const OurRecruiters = () => {
                                             <img
                                                 src={rec.img}
                                                 alt={rec.name}
-                                                className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                                                className="max-w-full max-h-full object-contain filter transition-all duration-500"
                                             />
                                         </div>
                                     </motion.div>

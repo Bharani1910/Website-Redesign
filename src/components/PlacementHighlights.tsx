@@ -109,7 +109,7 @@ const PlacementHighlights = () => {
 
                         {/* Recruiters Logos Carousel (Simple representation) */}
                         <div className="mt-12 overflow-hidden whitespace-nowrap">
-                            <div className="animate-marquee flex items-center space-x-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                            <div className="animate-marquee flex items-center space-x-12 opacity-80 transition-all duration-500">
                                 {['CTS', 'ZOHO', 'TCS', 'INFOSYS', 'CADENCE', 'NOKIA', 'HCL', 'IBM', 'WIPRO', 'TECH MAHINDRA'].map((logo) => (
                                     <span key={logo} className="text-2xl font-black font-heading tracking-widest text-white/40">{logo}</span>
                                 ))}

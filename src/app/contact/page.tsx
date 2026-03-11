@@ -16,7 +16,7 @@ const ContactPage = () => {
                 title="Get in Touch"
                 subtitle="Have questions? We're here to help you. Reach out to us through any of our channels."
                 breadcrumb="Contact"
-                bgImage="https://www.gcee.ac.in/assets/img/main/img1.jpg"
+                bgImage="https://content.jdmagicbox.com/comp/erode/w4/9999px424.x424.220214205704.b5w4/catalogue/irtt-boys-hostel-erode-hostel-for-boy-students-9moaipl57b.jpg"
             />
 
             <section className="py-24 relative overflow-hidden">

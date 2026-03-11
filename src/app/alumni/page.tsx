@@ -57,9 +57,8 @@ const AlumniPage = () => {
                                 <img
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtObVnaxnn-poArrh6LiueX-DVuLnj0wxb5g&s"
                                     alt="Alumni Reunion"
-                                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                                    className="w-full h-full object-cover transition-all duration-1000"
                                 />
-                                <div className="absolute inset-0 bg-primary/20 mix-blend-multiply group-hover:opacity-0 transition-opacity"></div>
                             </div>
                         </div>
                     </div>
@@ -75,7 +74,7 @@ const AlumniPage = () => {
                                 Register now with the official GCEE Alumni Database.
                             </p>
                             <a
-                                href="https://www.irttalumni.org/register"
+                                href="https://www.irttalumni.org/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-10 py-5 bg-secondary text-primary font-black rounded-2xl shadow-xl hover:shadow-secondary/30 transition-all flex items-center relative z-10 group/btn uppercase tracking-widest text-xs"
@@ -104,6 +103,39 @@ const AlumniPage = () => {
                                     className="px-8 py-5 bg-white text-primary border-2 border-primary/10 font-black rounded-2xl hover:bg-white transition-all flex items-center justify-center uppercase tracking-widest text-xs flex-1 group/site"
                                 >
                                     Visit Alumni Site <Globe className="ml-2 w-4 h-4 text-secondary group-hover/site:rotate-12 transition-transform" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="mt-24 space-y-12">
+                        <div className="text-center space-y-4">
+                            <h3 className="text-3xl font-bold font-heading text-primary">Alumni Contributions</h3>
+                            <p className="text-gray-500 font-body max-w-2xl mx-auto">
+                                The GCEE Alumni Association (IRTT Alumni) has been a constant pillar of support,
+                                contributing significantly to the infrastructure and development of the college.
+                            </p>
+                        </div>
+
+                        <div className="p-8 lg:p-12 bg-white rounded-[60px] border border-gray-100 shadow-xl overflow-hidden">
+                            <div className="aspect-[16/9] w-full bg-gray-50 rounded-[40px] flex items-center justify-center relative group">
+                                <img
+                                    src="https://www.gcee.ac.in/include/ajax/alumni/alumni_contribution.png"
+                                    alt="Alumni Contribution Chart"
+                                    className="max-w-full max-h-full object-contain"
+                                />
+                                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                            </div>
+                            <div className="mt-12 text-center space-y-6">
+                                <p className="text-sm font-bold text-primary uppercase tracking-widest italic">
+                                    Alumni Contribution to College Infrastructure from 2008 to till date
+                                </p>
+                                <a
+                                    href="https://www.irttalumni.org/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center text-secondary font-black hover:text-primary transition-colors gap-2"
+                                >
+                                    Click here to visit GCEE(IRTT) Alumni website <ArrowRight className="w-4 h-4" />
                                 </a>
                             </div>
                         </div>
