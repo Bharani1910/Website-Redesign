@@ -16,7 +16,7 @@ const recruiters = [
     { name: "Virtusa Polaris", logo: "Polaris", img: "https://tse3.mm.bing.net/th/id/OIP.R4dJCVLsf_pIpWkorBIDHAHaE3?pid=Api&P=0&h=180" },
     { name: "Nokia Networks", logo: "NOKIA", img: "https://tse4.mm.bing.net/th/id/OIP.D7hgAxnUjxjwcSepWCShbwHaEK?pid=Api&P=0&h=180" },
     { name: "Infoview", logo: "Infoview", img: "https://tse4.mm.bing.net/th/id/OIP.nTsBMuAUAbuB1nfCMEtJ5wHaEN?pid=Api&P=0&h=180" },
-    { name: "Infosys", logo: "Infosys", img: "https://tse2.mm.bing.net/th/id/OIP.n-qBGTTsnFyAFEnTIMj3hwHaHa?pid=Api&P=0&h=180" },
+    { name: "Infosys", logo: "Infosys", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyScqUYp_Z4-y_t5SnC4zgucTtum5yuJUe0A&s" },
     { name: "IBM", logo: "IBM", img: "https://tse4.mm.bing.net/th/id/OIP.7qx99OizDrFQjb1EkgZ-YAHaEK?pid=Api&P=0&h=180" },
     { name: "HCL Technologies", logo: "HCL", img: "https://tse4.mm.bing.net/th/id/OIP.cKAHFqOjJ4LTN2kvRwgyLgHaEK?pid=Api&P=0&h=180" },
     { name: "Capgemini", logo: "Capgemini", img: "https://tse2.mm.bing.net/th/id/OIP.OKBnVAFb4iY_T1TUdJa0vwHaEK?pid=Api&P=0&h=180" },
@@ -78,7 +78,7 @@ const OurRecruiters = () => {
                                             <img
                                                 src={rec.img}
                                                 alt={rec.name}
-                                                className="max-w-full max-h-full object-contain filter transition-all duration-500"
+                                                className="max-w-full max-h-full object-contain transition-all duration-500"
                                             />
                                         </div>
                                     </motion.div>
@@ -106,7 +106,7 @@ const OurRecruiters = () => {
                                         <img
                                             src={rec.img}
                                             alt={rec.name}
-                                            className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                                            className="max-w-full max-h-full object-contain transition-all duration-500"
                                         />
                                     </div>
                                     <div className="text-sm font-bold text-primary">{rec.name}</div>

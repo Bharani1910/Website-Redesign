@@ -59,7 +59,7 @@ const Footer = () => {
                                 'Civil Engineering',
                                 'Mechanical Engineering',
                                 'Automobile Engineering',
-                                'Computer science engineering (Data Science)',
+                                'Computer science Engineering (Data Science)',
                                 'Computer science Engineering',
                                 'Electrical & Electronics Engineering',
                                 'Information Technology',
