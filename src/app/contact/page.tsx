@@ -68,14 +68,14 @@ const ContactPage = () => {
                                 ))}
                             </div>
 
-                            <div className="pt-8 border-t border-gray-100 flex items-center space-x-6">
+                            {/* <div className="pt-8 border-t border-gray-100 flex items-center space-x-6">
                                 <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">Connect:</span>
                                 <div className="flex space-x-4">
                                     {['FB', 'TW', 'LN', 'IG'].map((social) => (
                                         <button key={social} className="w-10 h-10 rounded-full bg-primary/5 hover:bg-secondary flex items-center justify-center text-primary transition-all font-black text-[10px]">{social}</button>
                                     ))}
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* Contact Form Column */}
@@ -141,21 +141,30 @@ const ContactPage = () => {
             </section>
 
             {/* Map Section */}
-            <section className="h-[500px] w-full bg-gray-200 relative">
-                <div className="absolute inset-0 bg-primary/10 pointer-events-none z-10"></div>
-                <div className="absolute inset-0 flex items-center justify-center p-8 text-center z-20">
-                    <div className="p-8 bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl max-w-sm space-y-4">
+            <section className="h-[500px] w-full bg-gray-200 relative overflow-hidden">
+                <div className="absolute inset-0 bg-primary/5 pointer-events-none z-10 transition-opacity duration-700 group-hover:opacity-0"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none w-full max-w-sm">
+                    <div className="p-8 bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl space-y-4 text-center transform hover:scale-105 transition-all duration-500 pointer-events-auto">
                         <h3 className="text-2xl font-bold text-primary font-heading">Find Us on Campus</h3>
                         <p className="text-gray-500 font-body text-sm">Our 200-acre campus is located conveniently between Chithode and Bhavani in Erode.</p>
-                        <button className="flex items-center mx-auto text-primary font-bold hover:text-secondary group transition-colors">
+                        <a
+                            href="https://maps.app.goo.gl/wLDVFphMAGDtbRMb9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center text-primary font-bold hover:text-secondary group transition-colors"
+                        >
                             Open in Google Maps <ChevronRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        </a>
                     </div>
                 </div>
-                {/* Placeholder for iframe map */}
-                <div className="w-full h-full bg-gray-200 animate-pulse flex items-center justify-center text-gray-300 font-bold text-2xl uppercase tracking-widest italic">
-                    Map Implementation Block
-                </div>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.332342537021!2d77.6672323758661!3d11.411600088780361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba913160a2b9b71%3A0x7d6f51c720138986!2sGovernment%20College%20of%20Engineering%2C%20Erode!5e0!3m2!1sen!2sin!4v1741700661000!5m2!1sen!2sin"
+                    className="w-full h-full border-0"
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
             </section>
 
             <Footer />

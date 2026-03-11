@@ -49,10 +49,15 @@ const PlacementContact = () => {
                                         </div>
                                         <div className="space-y-1">
                                             <h4 className="font-bold text-primary italic">Placement Office Address</h4>
-                                            <p className="text-sm text-gray-500 font-body leading-relaxed">
+                                            <a
+                                                href="https://maps.app.goo.gl/wLDVFphMAGDtbRMb9"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-sm text-gray-500 font-body leading-relaxed hover:text-primary transition-colors"
+                                            >
                                                 Government College of Engineering,<br />
                                                 Erode - 638 316, Tamilnadu, India.
-                                            </p>
+                                            </a>
                                         </div>
                                     </div>
 

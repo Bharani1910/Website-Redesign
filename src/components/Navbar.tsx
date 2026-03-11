@@ -24,7 +24,6 @@ const navItems = [
             { name: "Programs", href: "/academics" },
             { name: "Departments", href: "/departments" },
             { name: "Curriculum", href: "/academics#curriculum" },
-            { name: "Downloads", href: "/downloads" },
         ]
     },
     { name: "Admissions", href: "/admissions" },
@@ -51,6 +50,9 @@ const navItems = [
         ]
     },
     { name: "Resources", href: "/student-resources" },
+    { name: "AICTE", href: "/aicte" },
+    { name: "NIRF", href: "/nirf" },
+    { name: "Exam Cell", href: "https://examgcee.blogspot.com/" },
     { name: "Contact", href: "/contact" },
 ];
 

@@ -8,21 +8,21 @@ import { BarChart3, TrendingUp, CheckCircle, ArrowRight, Download } from "lucide
 import { motion } from "framer-motion";
 
 const statsData = [
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2021-2025",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2020-2024",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2019-2023",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2018-2022",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2017-2021",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2016-2020",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2015-2019",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2014-2018",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2013-2017",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2012-2016",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2011-2015",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2010-2014",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2009-2013",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2008-2012",
-    "PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF 2007-2011",
+    { title: "2021-2025", file: "/placement/2021-2025.png" },
+    { title: "2020-2024", file: "/placement/2020-2024.png" },
+    { title: "2019-2023", file: "/placement/2019-2023.png" },
+    { title: "2018-2022", file: "/placement/2018-2022.png" },
+    { title: "2017-2021", file: "/placement/2017-2021.png" },
+    { title: "2016-2020", file: "/placement/2016-2020.png" },
+    { title: "2015-2019", file: "/placement/2015-2019.png" },
+    { title: "2014-2018", file: "/placement/2014-2018.png" },
+    { title: "2013-2017", file: "/placement/2013-2017.png" },
+    { title: "2012-2016", file: "/placement/2012-2016.png" },
+    { title: "2011-2015", file: "/placement/2011-2015.png" },
+    { title: "2010-2014", file: "/placement/2010-2014.png" },
+    { title: "2009-2013", file: "/placement/2009-2013.png" },
+    { title: "2008-2012", file: "/placement/2008-2012.png" },
+    { title: "2007-2011", file: "/placement/2007-2011.png" },
 ];
 
 const PlacementStatistics = () => {
@@ -89,32 +89,38 @@ const PlacementStatistics = () => {
 
                                 <div className="space-y-4 max-h-[600px] overflow-y-auto pr-4 scrollbar-hide">
                                     {statsData.map((drive, index) => (
-                                        <motion.div
-                                            key={drive}
-                                            initial={{ opacity: 0, x: 20 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{ delay: index * 0.05 }}
-                                            className="p-6 bg-white rounded-2xl border border-gray-100 flex items-center justify-between group hover:border-secondary hover:shadow-lg transition-all cursor-pointer"
+                                        <a
+                                            key={drive.title}
+                                            href={drive.file}
+                                            download={`Placement_Stats_${drive.title}.png`}
+                                            className="block group"
                                         >
-                                            <div className="flex items-center gap-4">
-                                                <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all font-black text-xs italic">
-                                                    #{statsData.length - index}
+                                            <motion.div
+                                                initial={{ opacity: 0, x: 20 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                viewport={{ once: true }}
+                                                transition={{ delay: index * 0.05 }}
+                                                className="p-6 bg-white rounded-2xl border border-gray-100 flex items-center justify-between group hover:border-secondary hover:shadow-lg transition-all cursor-pointer"
+                                            >
+                                                <div className="flex items-center gap-4">
+                                                    <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all font-black text-xs italic">
+                                                        #{statsData.length - index}
+                                                    </div>
+                                                    <div className="text-sm font-bold text-gray-600 group-hover:text-primary transition-colors pr-4 leading-tight">
+                                                        {drive.title}
+                                                    </div>
                                                 </div>
-                                                <div className="text-sm font-bold text-gray-600 group-hover:text-primary transition-colors pr-4 leading-tight">
-                                                    {drive.replace("PLACEMENT & TRAINING CELL CAMPUS DRIVE DETAILS OF ", "")}
-                                                </div>
-                                            </div>
-                                            <Download className="w-5 h-5 text-gray-300 group-hover:text-secondary group-hover:translate-y-1 transition-all" />
-                                        </motion.div>
+                                                <Download className="w-5 h-5 text-gray-300 group-hover:text-secondary group-hover:translate-y-1 transition-all" />
+                                            </motion.div>
+                                        </a>
                                     ))}
                                 </div>
 
-                                <div className="pt-4 border-t border-gray-100">
+                                {/* <div className="pt-4 border-t border-gray-100">
                                     <button className="w-full py-4 bg-primary text-secondary font-black rounded-xl text-xs uppercase tracking-[0.2em] shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
                                         Download Full Statistical Report PDF
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

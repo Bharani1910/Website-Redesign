@@ -95,11 +95,16 @@ const Footer = () => {
                         <ul className="space-y-6">
                             <li className="flex items-start space-x-4">
                                 <MapPin className="text-secondary w-6 h-6 mt-1 flex-shrink-0" />
-                                <span className="text-white/70 text-sm leading-relaxed">
+                                <a
+                                    href="https://maps.app.goo.gl/wLDVFphMAGDtbRMb9"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-white/70 text-sm leading-relaxed hover:text-secondary transition-colors"
+                                >
                                     Government College of Engineering,<br />
                                     Chithode, Erode - 638316,<br />
                                     Tamil Nadu, India
-                                </span>
+                                </a>
                             </li>
                             <li className="flex items-start space-x-4 pt-4 border-t border-white/5">
                                 <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary/20 flex-shrink-0">
