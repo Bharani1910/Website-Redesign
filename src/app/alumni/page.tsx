@@ -107,7 +107,7 @@ const AlumniPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-24 space-y-12">
+                    {/* <div className="mt-24 space-y-12">
                         <div className="text-center space-y-4">
                             <h3 className="text-3xl font-bold font-heading text-primary">Alumni Contributions</h3>
                             <p className="text-gray-500 font-body max-w-2xl mx-auto">
@@ -139,7 +139,7 @@ const AlumniPage = () => {
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 

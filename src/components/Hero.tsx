@@ -73,7 +73,7 @@ const Hero = () => {
                     </motion.div>
 
                     {/* Floating Feature Cards */}
-                
+
                     {/* <div className="hidden lg:flex flex-col space-y-6">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -104,12 +104,6 @@ const Hero = () => {
                 </div>
             </div>
 
-            {/* Scroll Indicator */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-                <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-                    <div className="w-1 h-3 bg-secondary rounded-full"></div>
-                </div>
-            </div>
         </section>
     );
 };

@@ -10,6 +10,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const professors = [
     // Administrative
     { id: 1, name: "Dr. Saradha", dept: "Administrative", role: "Principal", qual: "M.E., Ph.D.", exp: "34 Years", spec: "Semantic Web, Neural Networks", email: "gceeprincipal@gmail.com", image: "http://www.gcee.ac.in/include/ajax/cse/professor&hod.jpeg" },
+    { id: 101, name: "Dr. B. Suresh", dept: "Administrative", role: "Registrar i/c", qual: "M.E., Ph.D.", exp: "22 Years", spec: "Public Administration", email: "registrar@gcee.ac.in" },
+    { id: 102, name: "Mr. K. Ramesh", dept: "Administrative", role: "Administrative Officer", qual: "MBA, M.Phil.", exp: "18 Years", spec: "Management Systems", email: "ao@gcee.ac.in" },
 
     // Civil
     { id: 2, name: "Dr. P. Saravanakumar", dept: "Civil", role: "Assistant Professor (Sr) & Head", qual: "M.E., Ph.D", exp: "20 Years", spec: "Structural Engineering", email: "grpsaravanan@gmail.com", phone: "+91-94436 67806", journals: 6, conf: 10, image: "http://www.gcee.ac.in/include/ajax/civil/civil_hod.jpg" },
@@ -216,7 +218,7 @@ const FacultyPage = () => {
                         </div>
                     )}
 
-                    <div className="pt-24 text-center space-y-8">
+                    {/* <div className="pt-24 text-center space-y-8">
                         <div className="inline-block p-8 bg-primary rounded-[40px] text-white shadow-2xl relative overflow-hidden group">
                             <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none group-hover:scale-110 transition-transform duration-1000">
                                 <img src="/next.svg" className="w-full h-full object-cover" alt="" />
@@ -230,7 +232,7 @@ const FacultyPage = () => {
                                 <button className="px-8 py-4 bg-white text-primary font-bold rounded-xl whitespace-nowrap hover:bg-secondary transition-all shadow-lg hover:shadow-secondary/30">Detailed Directory PDF</button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 

@@ -61,9 +61,9 @@ const Footer = () => {
                                 'Automobile Engineering',
                                 'Computer science engineering (Data Science)',
                                 'Computer science Engineering',
-                                'Electrical Engineering',
+                                'Electrical & Electronics Engineering',
                                 'Information Technology',
-                                'Electronics Engineering'
+                                'Electronics & Communication Engineering'
                             ].map((item) => (
                                 <li key={item}>
                                     <Link href="/departments" className="text-white/70 hover:text-secondary hover:translate-x-2 flex items-center transition-all group">

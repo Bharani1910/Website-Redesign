@@ -123,7 +123,7 @@ const PlacementHighlights = () => {
                                     { name: "TECH MAHINDRA", img: "https://tse3.mm.bing.net/th/id/OIP.voIRGFzBIebkjiPOoh4SjgHaE7?pid=Api&P=0&h=180" }
                                 ].map((logo) => (
                                     <div key={logo.name} className="flex flex-col items-center shrink-0">
-                                        <div className="h-10 w-auto relative flex items-center justify-center grayscale hover:grayscale-0 transition-all">
+                                        <div className="h-10 w-auto relative flex items-center justify-center hover:scale-110 transition-all">
                                             <img src={logo.img} alt={logo.name} className="max-h-full max-w-[120px] object-contain" />
                                         </div>
                                         <span className="text-[10px] font-black font-heading tracking-widest text-white/40 mt-2">{logo.name}</span>
@@ -134,8 +134,8 @@ const PlacementHighlights = () => {
                     </motion.div>
 
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     );
 };
 
