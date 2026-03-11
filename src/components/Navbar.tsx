@@ -54,10 +54,13 @@ const navItems = [
         name: "Committees",
         href: "/committees",
         dropdown: [
-            { name: "Statutory Committees", href: "/committees" },
-            { name: "IQAC", href: "/committees/iqac" },
-            { name: "Anti-Ragging", href: "/committees/anti-ragging" },
-            { name: "Grievance Redressal", href: "/committees/grievance" },
+            { name: "Internal Complaints", href: "/committees/internal-complaints" },
+            { name: "Grievance Registration", href: "/committees/grievance" },
+            { name: "Anti Ragging", href: "/committees/anti-ragging" },
+            { name: "Student Counselling", href: "/committees/student-counselling" },
+            { name: "Industry Cell (IIC)", href: "/committees/iic" },
+            { name: "Quality Assurance (QAC)", href: "/committees/qac" },
+            { name: "Research & Development", href: "/committees/rd" },
         ]
     },
     {
