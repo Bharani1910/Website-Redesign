@@ -55,7 +55,7 @@ const AlumniPage = () => {
                         <div className="flex-1 relative">
                             <div className="aspect-square bg-gray-100 rounded-[80px] overflow-hidden shadow-2xl rotate-3 relative hover:rotate-0 transition-all duration-700">
                                 <img
-                                    src="https://www.gcee.ac.in/assets/img/sliders/layer/NammaGCEE2.jpeg"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtObVnaxnn-poArrh6LiueX-DVuLnj0wxb5g&s"
                                     alt="Alumni Reunion"
                                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                                 />
@@ -74,9 +74,14 @@ const AlumniPage = () => {
                                 Reconnect with your batchmates, mentor current students, and stay updated with campus developments.
                                 Register now with the official GCEE Alumni Database.
                             </p>
-                            <button className="px-10 py-5 bg-secondary text-primary font-black rounded-2xl shadow-xl hover:shadow-secondary/30 transition-all flex items-center relative z-10 group/btn uppercase tracking-widest text-xs">
+                            <a
+                                href="https://www.irttalumni.org/register"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-10 py-5 bg-secondary text-primary font-black rounded-2xl shadow-xl hover:shadow-secondary/30 transition-all flex items-center relative z-10 group/btn uppercase tracking-widest text-xs"
+                            >
                                 Alumni Registration <ArrowRight className="ml-3 w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
-                            </button>
+                            </a>
                         </div>
 
                         <div className="p-12 bg-gray-50 rounded-[60px] border border-gray-100 space-y-8 relative overflow-hidden group">
@@ -88,9 +93,19 @@ const AlumniPage = () => {
                                 Under our IIP (Industry-Institute Partnership), we host monthly webinars and workshops
                                 conducted by our distinguished alumni for final year students.
                             </p>
-                            <a href="/contact" className="px-10 py-5 bg-primary text-white font-black rounded-2xl shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center relative z-10 uppercase tracking-widest text-xs">
-                                Propose a Session
-                            </a>
+                            <div className="flex flex-col sm:flex-row gap-4 relative z-10">
+                                <a href="/contact" className="px-8 py-5 bg-primary text-white font-black rounded-2xl shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center uppercase tracking-widest text-xs flex-1">
+                                    Propose a Session
+                                </a>
+                                <a
+                                    href="https://www.irttalumni.org/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-8 py-5 bg-white text-primary border-2 border-primary/10 font-black rounded-2xl hover:bg-white transition-all flex items-center justify-center uppercase tracking-widest text-xs flex-1 group/site"
+                                >
+                                    Visit Alumni Site <Globe className="ml-2 w-4 h-4 text-secondary group-hover/site:rotate-12 transition-transform" />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
