@@ -47,12 +47,29 @@ const navItems = [
             { name: "Facilities", href: "/facilities" },
             { name: "Gallery", href: "/gallery" },
             { name: "News & Events", href: "/news-events" },
+            { name: "Resources", href: "/student-resources" },
         ]
     },
-    { name: "Resources", href: "/student-resources" },
-    { name: "AICTE", href: "/aicte" },
-    { name: "NIRF", href: "/nirf" },
-    { name: "Exam Cell", href: "https://examgcee.blogspot.com/" },
+    {
+        name: "Committees",
+        href: "/committees",
+        dropdown: [
+            { name: "Statutory Committees", href: "/committees" },
+            { name: "IQAC", href: "/committees/iqac" },
+            { name: "Anti-Ragging", href: "/committees/anti-ragging" },
+            { name: "Grievance Redressal", href: "/committees/grievance" },
+        ]
+    },
+    {
+        name: "Institutional",
+        href: "/aicte",
+        dropdown: [
+            { name: "AICTE Approval", href: "/aicte" },
+            { name: "NIRF Rankings", href: "/nirf" },
+            { name: "Exam Cell", href: "https://examgcee.blogspot.com/" },
+        ]
+    },
+    { name: "Alumni", href: "/alumni" },
     { name: "Contact", href: "/contact" },
 ];
 
