@@ -28,7 +28,17 @@ const navItems = [
         ]
     },
     { name: "Admissions", href: "/admissions" },
-    { name: "Placements", href: "/placements" },
+    {
+        name: "Placements",
+        href: "/placements",
+        dropdown: [
+            { name: "Overview", href: "/placements" },
+            { name: "Statistics", href: "/placements/statistics" },
+            { name: "Training", href: "/placements/training" },
+            { name: "Recruiters", href: "/placements/recruiters" },
+            { name: "Contact", href: "/placements/contact" },
+        ]
+    },
     { name: "Research", href: "/research" },
     {
         name: "Campus",

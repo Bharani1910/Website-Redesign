@@ -13,6 +13,7 @@ export default function AboutPage() {
                 title="About Our Institution"
                 subtitle="A legacy of engineering excellence and social commitment since 1984."
                 breadcrumb="About Us"
+                bgImage="https://www.gcee.ac.in/assets/img/sliders/layer/CollegeBirdView.jpeg"
             />
 
             {/* History Section */}

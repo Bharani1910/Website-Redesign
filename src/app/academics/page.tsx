@@ -57,9 +57,10 @@ const AcademicsPage = () => {
             <Navbar />
 
             <PageHeader
-                title="Academics & Curriculum"
-                subtitle="Excellence in technological education, fostering innovation across 10 different disciplines."
+                title="Academic Excellence"
+                subtitle="Nurturing the next generation of engineers through rigorous curriculum and practical exposure."
                 breadcrumb="Academics"
+                bgImage="https://www.gcee.ac.in/assets/img/main/img3.jpg"
             />
 
             {/* Program Overview Grid */}

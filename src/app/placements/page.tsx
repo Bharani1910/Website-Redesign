@@ -4,18 +4,39 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { Award, Briefcase, GraduationCap, Building2, CheckCircle, ArrowRight } from "lucide-react";
+import { BarChart3, GraduationCap, Briefcase, Phone, ArrowRight, HelpCircle, CheckCircle } from "lucide-react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
-const recruiters = [
-    "CTS", "ZOHO", "TCS", "Tech Mahindra", "TAFE", "Polaris", "NOKIA", "Infoview",
-    "Infosys", "IBM", "HCL", "CSS Corp", "Capgemini", "CADENCE", "Hexaware"
-];
-
-const highlights = [
-    { student: "V. Krishnamoorthy", dept: "M.E. CSE", company: "SIERRA Support Centre", package: "38.5 LPA" },
-    { student: "R. Gowtham", dept: "B.E. ECE", company: "CADENCE Design Systems", package: "20.49 LPA" },
-    { student: "C. Sahana Priya", dept: "B.E. ECE", company: "CADENCE Design Systems", package: "20.49 LPA" },
+const subPages = [
+    {
+        title: "Placement Statistics",
+        desc: "Annual placement records, department-wise stats, and historical performance from 2007 to 2025.",
+        icon: <BarChart3 className="w-8 h-8" />,
+        href: "/placements/statistics",
+        color: "bg-blue-500"
+    },
+    {
+        title: "Placement Training",
+        desc: "Specialized training in aptitude, soft skills, and technical interview preparation for our students.",
+        icon: <GraduationCap className="w-8 h-8" />,
+        href: "/placements/training",
+        color: "bg-secondary"
+    },
+    {
+        title: "Our Recruiters",
+        desc: "View the wide range of top multinational corporations and core engineering firms that visit GCEE.",
+        icon: <Briefcase className="w-8 h-8" />,
+        href: "/placements/recruiters",
+        color: "bg-purple-500"
+    },
+    {
+        title: "Placement Contact",
+        desc: "Get in touch with our Placement Office for recruitment drives or industry-institute collaborations.",
+        icon: <Phone className="w-8 h-8" />,
+        href: "/placements/contact",
+        color: "bg-green-500"
+    }
 ];
 
 const PlacementsPage = () => {
@@ -24,113 +45,86 @@ const PlacementsPage = () => {
             <Navbar />
 
             <PageHeader
-                title="Placements & Career Success"
-                subtitle="Empowering graduates to secure positions at top multinational corporations and engineering firms."
+                title="Placements & Careers"
+                subtitle="Bridging the gap between academic brilliance and industrial requirements."
                 breadcrumb="Placements"
+                bgImage="https://www.gcee.ac.in/assets/img/main/img3.jpg"
             />
 
-            {/* Stats Section */}
+            {/* Sub-pages Navigation Grid */}
             <section className="py-24 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {[
-                            { label: "Annual Packages up to", value: "38.5", suffix: "LPA", icon: <Award className="w-8 h-8 text-secondary" /> },
-                            { label: "Recruiters Every Year", value: "15", suffix: "+", icon: <Briefcase className="w-8 h-8 text-blue-500" /> },
-                            { label: "Placement Percentage", value: "92", suffix: "%", icon: <GraduationCap className="w-8 h-8 text-green-500" /> },
-                            { label: "MNC Direct Partners", value: "10", suffix: "+", icon: <Building2 className="w-8 h-8 text-purple-500" /> },
-                        ].map((stat) => (
-                            <div key={stat.label} className="p-8 bg-white rounded-3xl shadow-xl border border-gray-100 flex flex-col items-center text-center space-y-4 hover:shadow-2xl transition-all">
-                                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-4">{stat.icon}</div>
-                                <div className="text-4xl font-black text-primary font-heading line-clamp-1">{stat.value}{stat.suffix}</div>
-                                <div className="text-xs font-bold text-gray-500 uppercase tracking-widest">{stat.label}</div>
-                            </div>
+                    <div className="text-center mb-16 space-y-4">
+                        <h2 className="text-4xl font-bold font-heading text-primary">Placement Directory</h2>
+                        <p className="text-gray-500 max-w-2xl mx-auto font-body">Explore detailed information about our industry relationships, student success stories, and recruitment processes.</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {subPages.map((page, index) => (
+                            <motion.div
+                                key={page.title}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                            >
+                                <Link
+                                    href={page.href}
+                                    className="group p-8 lg:p-12 bg-white rounded-[40px] shadow-xl hover:shadow-2xl border border-gray-100 transition-all flex flex-col md:flex-row items-center md:items-start gap-8 relative overflow-hidden h-full"
+                                >
+                                    <div className={`w-20 h-20 rounded-3xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform shadow-lg ${page.color}`}>
+                                        {page.icon}
+                                    </div>
+                                    <div className="space-y-4 text-center md:text-left">
+                                        <h3 className="text-2xl font-bold font-heading text-primary group-hover:text-secondary transition-colors">{page.title}</h3>
+                                        <p className="text-gray-500 font-body leading-relaxed">{page.desc}</p>
+                                        <div className="inline-flex items-center text-sm font-black text-primary uppercase tracking-widest gap-2">
+                                            Explore Section <ArrowRight className="w-4 h-4 text-secondary group-hover:translate-x-2 transition-transform" />
+                                        </div>
+                                    </div>
+                                    <div className="absolute top-0 right-0 p-8 opacity-5 -z-0">
+                                        <HelpCircle className="w-32 h-32" />
+                                    </div>
+                                </Link>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Highlights Section */}
+            {/* Mission/Overview Section */}
             <section className="py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="flex-1 space-y-8">
-                            <div className="inline-flex items-center space-x-2 text-primary font-bold uppercase tracking-widest text-xs">
-                                <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                                <span>Top Achievers 2024</span>
+                            <div className="inline-block px-4 py-1.5 bg-secondary/15 text-primary text-xs font-bold tracking-widest uppercase rounded-full border border-secondary/20">
+                                Placement Cell Mission
                             </div>
-                            <h2 className="text-4xl font-bold font-heading text-primary leading-tight">Milestone Placements in Top Tech Giants</h2>
-                            <p className="text-lg text-gray-600 font-body leading-relaxed">
-                                Our students consistently break records with their performance in competitive recruitment drives.
-                                From core engineering roles to high-end tech consultations, GCEE graduates are everywhere.
+                            <h2 className="text-4xl font-bold font-heading text-primary leading-tight">Empowering Students for Global Careers</h2>
+                            <p className="text-lg text-gray-500 font-body leading-relaxed max-w-xl">
+                                "The aim of our placement section is to have 100 percent placement. A separate placement section is functioning to arrange for campus interviews and other placement works under the guidance of our dedicated officers."
                             </p>
-
-                            <div className="space-y-4">
-                                {highlights.map((h) => (
-                                    <div key={h.student} className="p-6 bg-primary/5 rounded-2xl border-l-8 border-secondary flex flex-wrap justify-between items-center gap-4">
-                                        <div className="space-y-1">
-                                            <div className="font-bold text-primary text-xl font-heading">{h.student}</div>
-                                            <div className="text-xs font-bold text-gray-500 uppercase tracking-widest">{h.dept} | {h.company}</div>
-                                        </div>
-                                        <div className="text-2xl font-black text-primary">{h.package}</div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                {[
+                                    "Above 90% consistent placement rate",
+                                    "Dedicated Industry-Institute Partnership (IIP)",
+                                    "Department-wise coordinators & student cells",
+                                    "Rich alumni network for corporate updates"
+                                ].map((bullet) => (
+                                    <div key={bullet} className="flex items-center space-x-3 text-sm font-bold text-gray-600">
+                                        <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                                        <span>{bullet}</span>
                                     </div>
                                 ))}
                             </div>
+                        </div>
 
-                            <div className="pt-6">
-                                <button className="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-lg hover:shadow-primary/30 inline-flex items-center transition-all">
-                                    Full Placement Report 2024 <ArrowRight className="ml-3 w-5 h-5 text-secondary" />
-                                </button>
+                        <div className="flex-1 relative">
+                            <div className="relative rounded-[60px] overflow-hidden shadow-2xl z-10">
+                                <img src="https://www.gcee.ac.in/assets/img/main/img3.jpg" className="w-full aspect-[4/3] object-cover" alt="Placement Success" />
+                                <div className="absolute inset-0 bg-primary/20"></div>
                             </div>
-                        </div>
-
-                        <div className="flex-1">
-                            <div className="relative rounded-[60px] overflow-hidden shadow-2xl skew-y-1 hover:skew-y-0 transition-all duration-700">
-                                <img src="/images/placements.png" className="w-full object-cover aspect-[4/5]" alt="Placement Success" />
-                                <div className="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-primary/90 to-transparent flex flex-col items-center text-center text-white">
-                                    <div className="text-6xl font-black mb-4">92%</div>
-                                    <div className="text-sm font-bold uppercase tracking-widest text-secondary">Average Placement Rate</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Recruiter Marquee Section */}
-            <section className="py-24 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-bold font-heading text-primary mb-16 uppercase tracking-widest">Our Top Recruiters</h2>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
-                        {recruiters.map((r) => (
-                            <div key={r} className="p-8 bg-white rounded-3xl shadow-sm hover:shadow-xl hover:border-secondary transition-all flex items-center justify-center group border border-gray-100">
-                                <span className="text-xl font-black font-heading text-gray-300 group-hover:text-primary transition-colors tracking-widest uppercase">{r}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Facilities Section */}
-            <section className="py-24 bg-primary text-white text-center">
-                <div className="max-w-4xl mx-auto px-4 lg:px-0 space-y-8">
-                    <h2 className="text-4xl font-bold font-heading">Placement Training & Support</h2>
-                    <p className="text-lg text-white/70 leading-relaxed font-body">
-                        GCEE provides comprehensive pre-placement training including Soft Skills,
-                        Aptitude Training, Mock Interviews, and Technical Workshops to bridge the
-                        gap between academic learning and industry expectations.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-6">
-                        <div className="flex items-center space-x-3 text-secondary font-bold">
-                            <CheckCircle className="w-5 h-5" />
-                            <span>Dedicated Cell</span>
-                        </div>
-                        <div className="flex items-center space-x-3 text-secondary font-bold">
-                            <CheckCircle className="w-5 h-5" />
-                            <span>Regular Mock Sessions</span>
-                        </div>
-                        <div className="flex items-center space-x-3 text-secondary font-bold">
-                            <CheckCircle className="w-5 h-5" />
-                            <span>Industry Collaborations</span>
+                            <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-secondary rounded-[40px] -z-0"></div>
                         </div>
                     </div>
                 </div>

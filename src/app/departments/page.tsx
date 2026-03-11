@@ -92,6 +92,7 @@ const DepartmentsPage = () => {
                 title="Our Academic Departments"
                 subtitle="Explore our diverse engineering disciplines focused on research and industry excellence."
                 breadcrumb="Departments"
+                bgImage="https://www.gcee.ac.in/assets/img/sliders/layer/CollegeBirdView.jpeg"
             />
 
             <section className="py-24">

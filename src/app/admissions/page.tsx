@@ -34,9 +34,10 @@ const AdmissionsPage = () => {
             <Navbar />
 
             <PageHeader
-                title="Admissions 2026-27"
-                subtitle="Step into a world of technical innovation and excellence. Join our growing academic community."
+                title="Join our Community"
+                subtitle="Your journey towards engineering excellence starts here with our merit-based admission process."
                 breadcrumb="Admissions"
+                bgImage="https://www.gcee.ac.in/assets/img/sliders/layer/CollegeBirdView.jpeg"
             />
 
             {/* Program Types */}
@@ -135,7 +136,7 @@ const AdmissionsPage = () => {
                                         <div className="space-y-1">
                                             <div className="text-[10px] font-black text-secondary uppercase tracking-widest">Helpline Support</div>
                                             <div className="text-xl font-bold text-primary font-heading tracking-tight">9280091827
-</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="pt-10 border-t border-gray-100">

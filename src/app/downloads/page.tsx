@@ -35,6 +35,7 @@ const DownloadsPage = () => {
                 title="Resources & Downloads"
                 subtitle="Access official forms, academic calendars, and institutional documents for students and faculty."
                 breadcrumb="Downloads"
+                bgImage="https://www.gcee.ac.in/assets/img/sliders/layer/CollegeBirdView.jpeg"
             />
 
             <section className="py-24">
@@ -52,8 +53,8 @@ const DownloadsPage = () => {
                                             key={cat}
                                             onClick={() => setFilter(cat)}
                                             className={`px-6 py-4 rounded-xl text-sm font-bold text-left transition-all flex justify-between items-center ${filter === cat
-                                                    ? "bg-primary text-secondary shadow-lg shadow-primary/30"
-                                                    : "text-gray-400 hover:text-primary hover:bg-gray-50 border border-transparent"
+                                                ? "bg-primary text-secondary shadow-lg shadow-primary/30"
+                                                : "text-gray-400 hover:text-primary hover:bg-gray-50 border border-transparent"
                                                 }`}
                                         >
                                             {cat}

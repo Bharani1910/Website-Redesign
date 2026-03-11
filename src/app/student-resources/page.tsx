@@ -33,9 +33,10 @@ const StudentResourcesPage = () => {
             <Navbar />
 
             <PageHeader
-                title="Student Portals & Resources"
-                subtitle="One-stop gateway to all academic tools, result portals and institutional resources for GCEE students."
-                breadcrumb="Student Resources"
+                title="Student Resources"
+                subtitle="Everything you need to navigate your academic journey and campus life effectively."
+                breadcrumb="Resources"
+                bgImage="https://www.gcee.ac.in/assets/img/irtt_auditorium/img1.jpeg"
             />
 
             <section className="py-24">

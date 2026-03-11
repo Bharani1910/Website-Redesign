@@ -13,9 +13,10 @@ const ContactPage = () => {
             <Navbar />
 
             <PageHeader
-                title="Get In Touch"
-                subtitle="We're here to answer your questions and help you navigate your academic journey."
-                breadcrumb="Contact Us"
+                title="Get in Touch"
+                subtitle="Have questions? We're here to help you. Reach out to us through any of our channels."
+                breadcrumb="Contact"
+                bgImage="https://www.gcee.ac.in/assets/img/main/img1.jpg"
             />
 
             <section className="py-24 relative overflow-hidden">

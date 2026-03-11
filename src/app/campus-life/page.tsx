@@ -23,6 +23,7 @@ const CampusLifePage = () => {
                 title="Experience Campus Life"
                 subtitle="Where academic excellence meets vibrant creativity and active community engagements."
                 breadcrumb="Campus Life"
+                bgImage="https://www.gcee.ac.in/assets/img/sliders/layer/NammaGCEE2.jpeg"
             />
 
             <section className="py-24 bg-white overflow-hidden relative">
@@ -60,7 +61,7 @@ const CampusLifePage = () => {
 
                         <div className="flex-1 relative">
                             <div className="relative rounded-[60px] overflow-hidden shadow-2xl skew-y-3 z-10 transition-transform duration-700 hover:skew-y-0 group">
-                                <img src="/images/campus.png" className="w-full aspect-[4/5] object-cover group-hover:scale-110 transition-transform duration-700" alt="Cultural Fest" />
+                                <img src="https://www.gcee.ac.in/assets/img/sliders/layer/NammaGCEE2.jpeg" className="w-full aspect-[4/5] object-cover group-hover:scale-110 transition-transform duration-700" alt="Cultural Fest" />
                                 <div className="absolute inset-0 bg-primary/20"></div>
                             </div>
                             {/* Floating Stat Card */}
@@ -120,7 +121,7 @@ const CampusLifePage = () => {
                         </div>
                     </section>
 
-                    <section className="py-24 text-center">
+                    {/* <section className="py-24 text-center">
                         <div className="max-w-3xl mx-auto space-y-8 p-12 bg-white rounded-[60px] shadow-xl border border-gray-100">
                             <h3 className="text-3xl font-bold font-heading text-primary">Join the Community</h3>
                             <p className="text-lg text-gray-500 font-body leading-relaxed max-w-2xl mx-auto">
@@ -131,7 +132,7 @@ const CampusLifePage = () => {
                                 <button className="px-8 py-4 bg-gray-50 text-primary font-bold rounded-xl border border-gray-200 shadow-sm hover:bg-white hover:shadow-lg transition-all">Past Events Archive</button>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
 
                 </div>
             </section>

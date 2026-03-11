@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { User, Shield, Briefcase, Mail, Phone, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { desc } from "framer-motion/client";
 
 const adminMembers = [
     {
@@ -19,27 +20,75 @@ const adminMembers = [
     },
     {
         role: "Department Head - Civil",
-        name: "Dr. K. Balamurugan",
+        name: "Dr. P. Saravanakumar",
         qual: "M.E., Ph.D.",
-        desc: "Leading research and structural engineering innovations.",
+        image: "/images/faculty/civil-hod.jpeg",
+        desc: "Specializing in Structural Engineering with 20 years of experience.",
         email: "civilhod@gcee.ac.in",
-        phone: "Ext: 201",
+        phone: "+91-94436 67806",
     },
     {
-        role: "Department Head - Mech",
-        name: "Dr. S. Senthil",
+        role: "Department Head - Mechanical",
+        name: "Dr. K. Balamurugan",
         qual: "M.E., Ph.D.",
-        desc: "Overseeing mechanical engineering and CMRG projects.",
-        email: "mechhod@gcee.ac.in",
-        phone: "Ext: 202",
+        image: "/images/faculty/mech-hod.jpeg",
+        desc: "Expert in Manufacturing Engineering with over 23 years of excellence.",
+        email: "drkbalamurugan@gcee.ac.in",
+        phone: "+91-9150166322",
     },
     {
         role: "Department Head - CSE",
-        name: "Dr. R. Karthik",
+        name: "Dr. A. Kavitha",
         qual: "M.E., Ph.D.",
-        desc: "Driving digital transformation and AI/ML initiatives.",
-        email: "csehod@gcee.ac.in",
-        phone: "Ext: 203",
+        image: "http://www.gcee.ac.in/include/ajax/cse/professor&hod.jpeg",
+        desc: "Leading Computer Science research with expertise in Semantic Web.",
+        email: "kavitha@gcee.ac.in",
+        phone: "+91-9442513055",
+    },
+    {
+        role: "Department Head - EEE",
+        name: "Dr. M. Mohammadha Hussaini",
+        qual: "M.E., Ph.D.",
+        image: "/images/faculty/eee-hod.jpeg",
+        desc: "Specializing in Power Systems with 25 years of academic leadership.",
+        email: "hussaini1008@gmail.com",
+        phone: "+91-9443406070",
+    },
+    {
+        role: "Department Head - ECE",
+        name: "Mr. M. RAJA",
+        qual: "M.E.",
+        image: "/images/faculty/ece-hod.jpeg",
+        desc: "30 Years of experience in Microwave Engineering and communications.",
+        email: "raja@irttech.ac.in",
+        phone: "+91-9842765554",
+    },
+    {
+        role: "Department Head - IT",
+        name: "Dr. I. Bhuvaneshwarri",
+        qual: "M.E, Ph.D",
+        image: "/images/faculty/it-hod.jpeg",
+        desc: "Expert in Big Data Analytics and Web Technology with 24 years exp.",
+        email: "ibw@gcee.ac.in",
+        phone: "+91-9442689006",
+    },
+    {
+        role: "Department Head - Automobile",
+        name: "Dr. R. Senthilraja",
+        qual: "M.E., Ph.D.",
+        image: "/images/faculty/auto-hod.jpeg",
+        desc: "Specializing in Thermal Engineering with over 12 years of research.",
+        email: "senthilraja@irttech.ac.in",
+        phone: "+91-94432 78504",
+    },
+    {
+        role: "Department Head - S & H",
+        name: "Mr. P. Asaigeethan",
+        qual: "M.Sc., M.Phil.",
+        image: "/images/faculty/sh-hod.jpeg",
+        desc: "Leading the Science & Humanities department for first-year excellence.",
+        email: "hodsh@gcee.ac.in",
+        phone: "Ext: 109",
     },
 ];
 
@@ -52,6 +101,7 @@ const AdministrationPage = () => {
                 title="College Administration"
                 subtitle="Meet the visionaries and leaders dedicated to academic excellence at GCE Erode."
                 breadcrumb="Administration"
+                bgImage="https://www.gcee.ac.in/assets/img/sliders/layer/CollegeBirdView.jpeg"
             />
 
             <section className="py-24">

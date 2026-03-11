@@ -7,16 +7,24 @@ interface PageHeaderProps {
     title: string;
     subtitle?: string;
     breadcrumb?: string;
+    bgImage?: string;
 }
 
-const PageHeader = ({ title, subtitle, breadcrumb }: PageHeaderProps) => {
+const PageHeader = ({ title, subtitle, breadcrumb, bgImage }: PageHeaderProps) => {
     return (
-        <div className="relative pt-40 pb-20 bg-primary overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 z-0 opacity-10">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-secondary rounded-full -mr-48 -mt-48 blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full -ml-48 -mb-48 blur-3xl"></div>
-            </div>
+        <div className="relative pt-48 pb-24 bg-primary overflow-hidden">
+            {/* Background Pattern or Image */}
+            {bgImage ? (
+                <div className="absolute inset-0 z-0">
+                    <img src={bgImage} className="w-full h-full object-cover opacity-80" alt="" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/10 to-primary/80"></div>
+                </div>
+            ) : (
+                <div className="absolute inset-0 z-0 opacity-10">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-secondary rounded-full -mr-48 -mt-48 blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full -ml-48 -mb-48 blur-3xl"></div>
+                </div>
+            )}
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div

@@ -45,9 +45,10 @@ const ResearchPage = () => {
             <Navbar />
 
             <PageHeader
-                title="Research & Development"
-                subtitle="Driving innovation and fostering a culture of scientific inquiry and technological advancement."
+                title="Research & Innovation"
+                subtitle="Pushing the boundaries of technology through dedicated research and development."
                 breadcrumb="Research"
+                bgImage="https://gcee.ac.in/assets/img/blog/img4.jpg"
             />
 
             <section className="py-24">

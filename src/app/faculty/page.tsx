@@ -8,12 +8,40 @@ import { UserCircle, Mail, Phone, ExternalLink, Search, Filter, GraduationCap } 
 import { motion, AnimatePresence } from "framer-motion";
 
 const professors = [
-    { id: 1, name: "Dr. Saradha", dept: "Administrative", role: "Principal", qual: "M.E., Ph.D.", exp: "34 Years", spec: "Semantic Web, Neural Networks", email: "gceeprincipal@gmail.com", image: "http://www.gcee.ac.in/include/ajax/cse/professor&hod.jpeg" },
-    { id: 2, name: "Dr. K. Balamurugan", dept: "Civil", role: "Professor & Head", qual: "M.E., Ph.D.", exp: "28 Years", spec: "Structural Engineering, Concrete Tech", email: "balamurugan@gcee.ac.in" },
-    { id: 3, name: "Dr. S. Senthil", dept: "Mechanical", role: "Professor & Head", qual: "M.E., Ph.D.", exp: "26 Years", spec: "Advanced Manufacturing, CAD/CAM", email: "senthil@gcee.ac.in" },
-    { id: 4, name: "Dr. R. Karthik", dept: "CS & IT", role: "Professor & Head", qual: "M.E., Ph.D.", exp: "24 Years", spec: "AI, Machine Learning, Data Science", email: "karthik@gcee.ac.in" },
-    { id: 5, name: "Dr. P. Rajeswari", dept: "ECE", role: "Associate Professor", qual: "M.E., Ph.D.", exp: "20 Years", spec: "Wireless Communication, 5G Ecosystems", email: "rajeswari@gcee.ac.in" },
-    { id: 6, name: "Dr. M. Logesh", dept: "EEE", role: "Assistant Professor", qual: "M.E., Ph.D.", exp: "15 Years", spec: "Renewable Energy, Power Electronics", email: "logesh@gcee.ac.in" },
+    // Administrative
+    { id: 1, name: "Dr. Saradha", dept: "Administrative", role: "Principal", qual: "M.E., Ph.D.", exp: "34 Years", spec: "Semantic Web, Neural Networks", email: "gceeprincipal@gmail.com", image: "/images/faculty/principal.jpeg" },
+
+    // CSE
+    { id: 2, name: "Dr. A. Kavitha", dept: "CS & IT", role: "Professor & Head", qual: "M.E., Ph.D.", exp: "24 Years", spec: "Semantic Web, AI/ML", email: "kavitha@gcee.ac.in", image: "/images/faculty/cse-hod.jpeg" },
+    { id: 3, name: "Mr. R. Sivasubramanian", dept: "CS & IT", role: "Associate Professor", qual: "M.S.", exp: "30 Years", spec: "Data Structures, Software Engineering", email: "sivasubramanian@irttech.ac.in" },
+    { id: 4, name: "Dr. G. Venkatachalam", dept: "CS & IT", role: "Associate Professor", qual: "M.E., Ph.D.", exp: "28 Years", spec: "Cloud Computing", email: "venkat@gcee.ac.in" },
+    { id: 101, name: "Dr. N. Magesh", dept: "CS & IT", role: "Assistant Professor (Sr)", qual: "M.E., Ph.D.", exp: "15 Years", spec: "Data Science", email: "magesh@gcee.ac.in" },
+
+    // Mechanical
+    { id: 5, name: "Dr. K. Balamurugan", dept: "Mechanical", role: "Professor & Head", qual: "M.E., Ph.D.", exp: "23 Years", spec: "Manufacturing Engineering", email: "drkbalamurugan@gcee.ac.in", image: "/images/faculty/mech-hod.jpeg" },
+    { id: 6, name: "Dr. R. Senthilraja", dept: "Mechanical", role: "Assistant Professor", qual: "M.E., Ph.D.", exp: "12 Years", spec: "Thermal Engineering", email: "senthilraja@irttech.ac.in" },
+    { id: 102, name: "Mrs. K. Uma", dept: "Mechanical", role: "Assistant Professor", qual: "M.E.", exp: "10 Years", spec: "Design Engineering", email: "uma@gcee.ac.in" },
+
+    // Civil
+    { id: 7, name: "Dr. P. Saravanakumar", dept: "Civil", role: "Professor & Head", qual: "M.E., Ph.D.", exp: "20 Years", spec: "Structural Engineering", email: "grpsaravanan@gmail.com", image: "/images/faculty/civil-hod.jpeg" },
+    { id: 8, name: "Dr. G. M. Gowthama kumar", dept: "Civil", role: "Assistant Professor (Sr)", qual: "M.E., Ph.D.", exp: "18 Years", spec: "Environmental Engineering", email: "gowthama@gcee.ac.in" },
+
+    // EEE
+    { id: 9, name: "Dr. M. Mohammadha Hussaini", dept: "EEE", role: "Associate Professor & Head", qual: "M.E., Ph.D.", exp: "25 Years", spec: "Power Systems", email: "hussaini1008@gmail.com", image: "/images/faculty/eee-hod.jpeg" },
+    { id: 10, name: "Dr. B. Baby Priya", dept: "EEE", role: "Associate Professor", qual: "M.E., Ph.D.", exp: "22 Years", spec: "Power Electronics", email: "babypriya@gcee.ac.in" },
+    { id: 103, name: "Dr. K. Tamilselvan", dept: "EEE", role: "Assistant Professor (Sr)", qual: "M.E., Ph.D.", exp: "18 Years", spec: "Renewable Energy", email: "tamilselvan@gcee.ac.in" },
+
+    // ECE
+    { id: 11, name: "Mr. M. RAJA", dept: "ECE", role: "Associate Professor & Head", qual: "M.E.", exp: "30 Years", spec: "Microwave Engineering", email: "raja@irttech.ac.in", image: "/images/faculty/ece-hod.jpeg" },
+    { id: 12, name: "Dr. G. Gowrison", dept: "ECE", role: "Assistant Professor (Sr)", qual: "M.E., Ph.D.", exp: "18 Years", spec: "VLSI Design", email: "gowrison@gcee.ac.in" },
+
+    // IT
+    { id: 13, name: "Dr. I. Bhuvaneshwarri", dept: "Information Technology", role: "Assistant Professor (Sr) & Head", qual: "M.E., Ph.D.", exp: "24 Years", spec: "Big Data, Web Tech", email: "ibw@gcee.ac.in", image: "/images/faculty/it-hod.jpeg" },
+    { id: 14, name: "Dr. M. Poongothai", dept: "Information Technology", role: "Assistant Professor (Sr)", qual: "M.E., Ph.D.", exp: "20 Years", spec: "Network Security", email: "poongothai@gcee.ac.in" },
+
+    // S & H
+    { id: 15, name: "Mr. P. Asaigeethan", dept: "S & H", role: "Head of Department", qual: "M.Sc., M.Phil.", exp: "20 Years", spec: "Mathematics", email: "hodsh@gcee.ac.in", image: "/images/faculty/sh-hod.jpeg" },
+    { id: 16, name: "Dr. M. Rajeswari", dept: "S & H", role: "Associate Professor", qual: "M.Sc., M.Phil., Ph.D.", exp: "16 Years", spec: "Physics", email: "mrajeswari@gct.ac.in" },
 ];
 
 const depts = ["All", "Administrative", "Civil", "Mechanical", "CS & IT", "ECE", "EEE", "Automobile", "S & H"];
@@ -33,6 +61,7 @@ const FacultyPage = () => {
                 title="Our Distinguished Faculty"
                 subtitle="Meet the highly qualified and experienced educators driving technical excellence at GCE Erode."
                 breadcrumb="Faculty"
+                bgImage="https://www.gcee.ac.in/assets/img/sliders/layer/CollegeBirdView.jpeg"
             />
 
             <section className="py-24">
@@ -60,63 +89,75 @@ const FacultyPage = () => {
                                 <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
                                 <input type="text" placeholder="Search faculty member..." className="w-full px-12 py-4 bg-white border border-gray-100 rounded-2xl focus:border-primary/20 transition-all outline-none text-sm shadow-sm" />
                             </div>
-                            <button className="p-4 bg-white border border-gray-100 rounded-2xl text-gray-400 hover:text-primary transition-all shadow-sm">
-                                <Filter className="w-5 h-5" />
-                            </button>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <AnimatePresence mode="popLayout">
-                            {filteredFaculty.map((p, index) => (
-                                <motion.div
-                                    key={p.id}
-                                    layout
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.9 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="bg-white p-8 lg:p-10 rounded-[50px] shadow-xl hover:shadow-2xl transition-all border border-gray-100 group overflow-hidden relative"
-                                >
-                                    <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
-                                        <GraduationCap className="w-24 h-24" />
+                    <div className="space-y-24">
+                        {depts.filter(d => d !== "All" && (filter === "All" || filter === d)).map((deptName) => {
+                            const deptFaculty = professors.filter(p => p.dept === deptName);
+                            if (deptFaculty.length === 0) return null;
+
+                            return (
+                                <div key={deptName} className="space-y-12">
+                                    <div className="flex items-center gap-4">
+                                        <div className="h-0.5 flex-grow bg-gray-100"></div>
+                                        <h2 className="text-2xl font-bold font-heading text-primary bg-gray-50 px-6 py-2 rounded-full border border-gray-100 uppercase tracking-widest text-sm">
+                                            {deptName}
+                                        </h2>
+                                        <div className="h-0.5 flex-grow bg-gray-100"></div>
                                     </div>
 
-                                    <div className="flex flex-col items-center text-center space-y-6">
-                                        {p.image ? (
-                                            <div className="w-24 h-24 rounded-[32px] overflow-hidden shadow-lg border-2 border-secondary/20">
-                                                <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
-                                            </div>
-                                        ) : (
-                                            <div className="w-24 h-24 bg-primary/5 rounded-[32px] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-secondary transition-all shadow-sm">
-                                                <UserCircle className="w-12 h-12" />
-                                            </div>
-                                        )}
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                        {deptFaculty.map((p) => (
+                                            <motion.div
+                                                key={p.id}
+                                                layout
+                                                initial={{ opacity: 0, scale: 0.95 }}
+                                                animate={{ opacity: 1, scale: 1 }}
+                                                className="bg-white p-8 lg:p-10 rounded-[50px] shadow-xl hover:shadow-2xl transition-all border border-gray-100 group overflow-hidden relative"
+                                            >
+                                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
+                                                    <GraduationCap className="w-24 h-24" />
+                                                </div>
 
-                                        <div className="space-y-1">
-                                            <h4 className="text-xl font-bold font-heading text-primary">{p.name}</h4>
-                                            <p className="text-xs font-black text-secondary uppercase tracking-widest">{p.role}</p>
-                                            <p className="text-sm font-bold text-gray-400 italic font-body">{p.qual} • {p.exp} Exp</p>
-                                        </div>
+                                                <div className="flex flex-col items-center text-center space-y-6">
+                                                    <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg border-4 border-secondary/20 bg-gray-100 group-hover:scale-105 transition-transform duration-500">
+                                                        {p.image ? (
+                                                            <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
+                                                        ) : (
+                                                            <div className="w-full h-full bg-primary/5 flex items-center justify-center text-primary">
+                                                                <UserCircle className="w-12 h-12" />
+                                                            </div>
+                                                        )}
+                                                    </div>
 
-                                        <div className="w-full py-4 px-6 bg-gray-50 rounded-3xl border border-gray-100 group-hover:bg-white group-hover:border-primary/10 transition-all">
-                                            <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Specialization</div>
-                                            <div className="text-xs font-bold text-primary italic leading-tight">{p.spec}</div>
-                                        </div>
+                                                    <div className="space-y-1">
+                                                        <h4 className="text-xl font-bold font-heading text-primary">{p.name}</h4>
+                                                        <p className="text-xs font-black text-secondary uppercase tracking-widest">{p.role}</p>
+                                                        <p className="text-sm font-bold text-gray-400 italic font-body">{p.qual} • {p.exp} Exp</p>
+                                                    </div>
 
-                                        <div className="w-full pt-6 border-t border-gray-100 flex flex-col items-center gap-4">
-                                            <div className="flex items-center space-x-2 text-xs font-bold text-gray-400 cursor-pointer hover:text-primary transition-colors">
-                                                <Mail className="w-4 h-4 text-secondary" />
-                                                <span>{p.email}</span>
-                                            </div>
-                                            <button className="flex items-center text-[10px] font-black uppercase tracking-widest text-primary hover:translate-x-1 transition-transform gap-2">
-                                                View Full Profile <ExternalLink className="w-4 h-4 text-secondary" />
-                                            </button>
-                                        </div>
+                                                    <div className="w-full py-4 px-6 bg-gray-50 rounded-3xl border border-gray-100 group-hover:bg-white group-hover:border-primary/10 transition-all">
+                                                        <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Specialization</div>
+                                                        <div className="text-xs font-bold text-primary italic leading-tight">{p.spec}</div>
+                                                    </div>
+
+                                                    <div className="w-full pt-6 border-t border-gray-100 flex flex-col items-center gap-4">
+                                                        <div className="flex items-center space-x-2 text-xs font-bold text-gray-400 cursor-pointer hover:text-primary transition-colors">
+                                                            <Mail className="w-4 h-4 text-secondary" />
+                                                            <span>{p.email}</span>
+                                                        </div>
+                                                        <button className="flex items-center text-[10px] font-black uppercase tracking-widest text-primary hover:translate-x-1 transition-transform gap-2">
+                                                            View Full Profile <ExternalLink className="ml-1 w-4 h-4" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        ))}
                                     </div>
-                                </motion.div>
-                            ))}
-                        </AnimatePresence>
+                                </div>
+                            );
+                        })}
                     </div>
 
                     {filteredFaculty.length === 0 && (
