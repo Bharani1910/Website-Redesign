@@ -91,7 +91,7 @@ const Navbar = () => {
             className={`sticky top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-lg py-2" : "bg-primary py-4"
                 }`}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     {/* Logo Section */}
                     <Link href="/" className="flex items-center space-x-3 group">
@@ -109,7 +109,7 @@ const Navbar = () => {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center space-x-1">
+                    <div className="hidden xl:flex items-center space-x-0.5">
                         {navItems.map((item) => (
                             <div
                                 key={item.name}
@@ -119,11 +119,11 @@ const Navbar = () => {
                             >
                                 <Link
                                     href={item.href}
-                                    className={`px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors ${scrolled ? "text-foreground hover:bg-gray-100" : "text-white hover:bg-white/10"
+                                    className={`px-3 py-2 rounded-md text-[13px] font-bold flex items-center transition-colors whitespace-nowrap ${scrolled ? "text-primary hover:bg-primary/5" : "text-white hover:bg-white/10"
                                         }`}
                                 >
                                     {item.name}
-                                    {item.dropdown && <ChevronDown className="ml-1 w-4 h-4" />}
+                                    {item.dropdown && <ChevronDown className="ml-0.5 w-3 h-3" />}
                                 </Link>
 
                                 {/* Dropdown Menu */}
@@ -133,7 +133,7 @@ const Navbar = () => {
                                             initial={{ opacity: 0, y: 10 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: 10 }}
-                                            className="absolute left-0 mt-0 w-48 bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden"
+                                            className="absolute left-1/2 -translate-x-1/2 mt-0 w-48 bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden"
                                         >
                                             {item.dropdown.map((subItem) => (
                                                 <Link
@@ -152,14 +152,14 @@ const Navbar = () => {
 
                         <Link
                             href="/admissions"
-                            className="ml-4 px-6 py-2 bg-secondary text-primary font-bold rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                            className="ml-4 px-5 py-2.5 bg-secondary text-primary text-[11px] font-black rounded-xl shadow-lg hover:shadow-secondary/30 hover:-translate-y-0.5 transition-all whitespace-nowrap uppercase italic tracking-tighter"
                         >
                             Apply Now
                         </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="lg:hidden flex items-center">
+                    <div className="xl:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className={`p-2 rounded-md ${scrolled ? "text-primary" : "text-white"}`}
@@ -177,7 +177,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="lg:hidden bg-white overflow-hidden border-t"
+                        className="xl:hidden bg-white overflow-hidden border-t"
                     >
                         <div className="px-4 pt-2 pb-6 space-y-1">
                             {navItems.map((item) => (
